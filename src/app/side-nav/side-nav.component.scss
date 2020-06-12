@@ -1,0 +1,29 @@
+ul.side-nav {
+    list-style: none;
+    border: 1px solid #000000;
+    min-height: 700px;
+    padding: 0px;
+    margin: 0px -15px;
+    color: #fff;
+    background-color: #343638;
+    & > li {
+        border-bottom: 1px solid #000;
+        & > a {
+            display: block;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .sub-nav {
+            padding: 0px;
+            & > a {
+                display: block;
+                // border-top: 1px solid #000000;
+                padding: 6px 6px 6px 40px;
+                color: #fff;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
