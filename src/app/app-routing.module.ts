@@ -16,6 +16,10 @@ const routes: Routes = [
   {
     path: 'category',
     component: CategoryComponent
+  },
+  {
+    path: 'course',
+    component: CategoryComponent
   }
 ];
 
