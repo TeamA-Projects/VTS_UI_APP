@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-12 col-md-4">
+        <div class="screen-header">
+            <h3>Categories</h3>
+        </div>
+    </div>
+    <div class="col col-md-4 offset-4 align-self-end text-center">
+        <div class="add-action">
+            <button class="add-action-icon" type="button" (click)="addNewCategory()">
+                <fa-icon [icon]="faAdd" data-toggle="tooltip" title="Add"></fa-icon> Add
+            </button>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <div class="div-table">
+            <div class="row div-table-head">
+                <div class="col">Category</div>
+                <div class="col">Trend</div>
+                <div class="col text-center">Actions</div>
+            </div>
+            <div class="row div-table-row" *ngFor="let cat of categories">
+                <div class="col">{{cat.CategoryName}}</div>
+                <div class="col">{{cat.TrendName}}</div>
+                <div class="col text-center">
+                    <div class="action-icons">
+                        <fa-icon [icon]="faEdit" data-toggle="tooltip" title="Edit"></fa-icon>
+                        <fa-icon [icon]="faDelete" data-toggle="tooltip" title="Delete"></fa-icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
