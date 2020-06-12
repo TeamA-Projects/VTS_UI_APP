@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+body {
+    // font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Trebuchet MS';
+}
+
+.screen-header {
+    padding: 2rem 1rem 1rem 1rem;
+    text-decoration: underline;
+}
+
+.action-icons {
+    text-align: center;
+    fa-icon {
+        padding: 5px;
+    }
+}
+
+
+.add-action {
+    .add-action-icon{
+        background-color: #fff;
+        margin-left: -20px;
+    }
+}
+
+.div-table {
+    padding: 1rem;
+    & > .row {
+        & > div {
+            padding: .75rem;
+        }
+    }
+    .div-table-head {
+        border-top: 2px solid #dee2e6;
+        border-bottom: 2px solid #dee2e6;
+        & > div {
+            font-weight: bolder;
+        }
+    }
+    .div-table-row {
+        border-bottom: 1px solid #dee2e6;
+    }
+}
