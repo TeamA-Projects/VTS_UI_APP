@@ -1,0 +1,62 @@
+{
+    "categories" : [
+        {
+            "CategoryID": 1,
+            "CategoryName": "Software", 
+            "AdditionalInfo": "Latest Trend"
+        },
+        {
+            "CategoryID": 2, 
+            "CategoryName": "Music", 
+            "AdditionalInfo": "Classical"
+        },
+        {
+            "CategoryID": 3, 
+            "CategoryName": "Tution", 
+            "AdditionalInfo": "Classes"
+        }
+    ],
+    "courseTypes" : [
+        {
+            "CourseTypeID": 1, 
+            "CourseType": "Full Time", 
+            "CategoryID": 1, 
+            "CategoryName": "Software"
+        },
+        {
+            "CourseTypeID": 2, 
+            "CourseType": "Part Time", 
+            "CategoryID": 1, 
+            "CategoryName": "Software"
+        },
+        {
+            "CourseTypeID": 3, 
+            "CourseType": "Practical", 
+            "CategoryID": 2, 
+            "CategoryName": "Music"
+        }
+      ],
+      "courses" : [
+        {
+            "CourseID": 1, 
+            "CourseName": "Azure Cloud", 
+            "CourseTypeID": 1, 
+            "CourseType": "Full Time", 
+            "AdditionalInfo": "Trend"
+        },
+        {
+            "CourseID": 2, 
+            "CourseName": "Python", 
+            "CourseTypeID": 2, 
+            "CourseType": "Part Time", 
+            "AdditionalInfo": "Trend"
+        },
+        {
+            "CourseID": 3, 
+            "CourseName": "Guitar", 
+            "CourseTypeID": 3, 
+            "CourseType": "Practical", 
+            "AdditionalInfo": "Trend"
+        }
+      ]
+}

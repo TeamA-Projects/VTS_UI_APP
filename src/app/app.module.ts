@@ -1,8 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import {HttpClientModule } from '@angular/common/http';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ModalModule } from 'ngx-bootstrap/modal';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,10 +25,12 @@ import { SideNavComponent } from './side-nav/side-nav.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FormsModule,
     FontAwesomeModule,
-    AdminModule
+    AdminModule,
+    ModalModule.forRoot(),
+    HttpClientModule,
+    AppRoutingModule,
   ],
   providers: [
     AdminService

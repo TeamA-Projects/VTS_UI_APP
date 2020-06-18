@@ -1,0 +1,44 @@
+<div class="modal fade" bsModal #addEditModal="bs-modal" [config]="{backdrop: 'static'}" tabindex="-1" role="dialog"
+    aria-labelledby="dialog-static-name">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 id="dialog-static-name" class="modal-title pull-left">{{courseID!=0 ? 'Edit' : 'Add'}} Course</h4>
+                <button type="button" class="close pull-right" aria-label="Close" (click)="close()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group row">
+                        <label for="course" class="col-sm-3 col-form-label">Course</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="courseName" name="CourseName"
+                                [(ngModel)]="course.CourseName" placeholder="Course Name">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="courseType" class="col-sm-3 col-form-label">Course Type</label>
+                        <div class="col-sm-9">
+                            <select id="courseType" name="courseType" class="form-control" [(ngModel)]="course.CourseTypeID">
+                                <option value="0">Select Course Type</option>
+                                <option *ngFor="let cTy of courseTypes" [value]="cTy.CourseTypeID">{{cTy.CourseType}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="additionalInfo" class="col-sm-3 col-form-label">Additional Info</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="additionalInfo" name="additionalInfo" 
+                            [(ngModel)]="course.AdditionalInfo" placeholder="Additional Info">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="close()">Close</button>
+                <button type="button" class="btn btn-primary" (click)="close()">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>

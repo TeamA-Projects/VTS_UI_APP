@@ -16,18 +16,36 @@ export class CategoryComponent implements OnInit {
 
   constructor(private adminService: AdminService) { }
 
+  categoryID : number = 0;
+  isOpenPopUp : boolean = false;
+
   public categories : ICategories = [];
 
   ngOnInit(): void {
+    this.getCategories();
+  }
+
+  getCategories() {
     this.adminService.getCategories().subscribe(
-      data=>{
+      data => {
         this.categories = data;
       }
     )
   }
 
   addNewCategory() {
-    
+    this.categoryID = 0;
+    this.isOpenPopUp = true;
+  }
+
+  editCategory(categoryID: number) {
+    this.categoryID = categoryID;
+    this.isOpenPopUp = true;
+  }
+
+  closePopUp() {
+    this.isOpenPopUp = false;
+    this.categoryID = 0;
   }
 
 }

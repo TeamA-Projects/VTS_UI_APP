@@ -1,0 +1,39 @@
+<div class="modal fade" bsModal #addEditModal="bs-modal" [config]="{backdrop: 'static'}" tabindex="-1" role="dialog"
+    aria-labelledby="dialog-static-name">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 id="dialog-static-name" class="modal-title pull-left">{{courseTypeID!=0 ? 'Edit' : 'Add'}} Course Type</h4>
+                <button type="button" class="close pull-right" aria-label="Close" (click)="close()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group row">
+                        <label for="courseType" class="col-sm-3 col-form-label">Course Type</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="courseType" name="CourseType"
+                                [(ngModel)]="courseType.CourseType" placeholder="Course Type">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="CategoryID" class="col-sm-3 col-form-label">Category</label>
+                        <div class="col-sm-9">
+                            <!-- <input type="text" class="form-control" name="CategoryID" [(ngModel)]="courseType.CategoryName"
+                                placeholder="Category"> -->
+                            <select name="CategoryID" class="form-control" [(ngModel)]="courseType.CategoryID">
+                                <option value="0">Select Category</option>
+                                <option *ngFor="let cat of categories" [value]="cat.CategoryID">{{cat.CategoryName}}</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="close()">Close</button>
+                <button type="button" class="btn btn-primary" (click)="close()">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>

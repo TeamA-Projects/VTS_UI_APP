@@ -20,6 +20,10 @@ const routes: Routes = [
   {
     path: 'course',
     component: CategoryComponent
+  },
+  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
   }
 ];
 

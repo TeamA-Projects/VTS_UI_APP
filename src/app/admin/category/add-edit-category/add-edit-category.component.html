@@ -1,0 +1,35 @@
+<div class="modal fade" bsModal #addEditModal="bs-modal" [config]="{backdrop: 'static'}" tabindex="-1" role="dialog"
+    aria-labelledby="dialog-static-name">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 id="dialog-static-name" class="modal-title pull-left">{{categoryID!=0 ? 'Edit' : 'Add'}} Category</h4>
+                <button type="button" class="close pull-right" aria-label="Close" (click)="close()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group row">
+                        <label for="categoryName" class="col-sm-3 col-form-label">Category Name</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="categoryName" name="CategoryName"
+                                [(ngModel)]="category.CategoryName" placeholder="Category Name">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="AdditionalInfo" class="col-sm-3 col-form-label">Additional Info</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" name="AdditionalInfo" [(ngModel)]="category.AdditionalInfo"
+                                placeholder="Additional Info">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="close()">Close</button>
+                <button type="button" class="btn btn-primary" (click)="saveCategoryDetails()">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>

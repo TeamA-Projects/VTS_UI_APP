@@ -1,12 +1,12 @@
 <div class="row">
     <div class="col-12 col-md-4">
         <div class="screen-header">
-            <h3>Categories</h3>
+            <h3>Courses</h3>
         </div>
     </div>
-    <div class="col col-md-4 offset-4 align-self-end text-center">
+    <div class="col col-md-3 offset-5 align-self-end text-center">
         <div class="add-action">
-            <button class="add-action-icon" type="button" (click)="addNewCategory()">
+            <button class="add-action-icon" type="button" (click)="addNewCourse()">
                 <fa-icon [icon]="faAdd" data-toggle="tooltip" title="Add"></fa-icon> Add
             </button>
         </div>
@@ -16,16 +16,18 @@
     <div class="col">
         <div class="div-table">
             <div class="row div-table-head">
-                <div class="col">Category</div>
+                <div class="col">Course Name</div>
+                <div class="col">Course Type</div>
                 <div class="col">Additional Info</div>
                 <div class="col text-center">Actions</div>
             </div>
-            <div class="row div-table-row" *ngFor="let cat of categories">
-                <div class="col">{{cat.CategoryName}}</div>
-                <div class="col">{{cat.AdditionalInfo}}</div>
+            <div class="row div-table-row" *ngFor="let cou of courses">
+                <div class="col">{{cou.CourseName}}</div>
+                <div class="col">{{cou.CourseType}}</div>
+                <div class="col">{{cou.AdditionalInfo}}</div>
                 <div class="col text-center">
                     <div class="action-icons">
-                        <fa-icon [icon]="faEdit" data-toggle="tooltip" title="Edit" (click)="editCategory(cat.CategoryID)"></fa-icon>
+                        <fa-icon [icon]="faEdit" data-toggle="tooltip" title="Edit" (click)="editCourse(cou.CourseID)"></fa-icon>
                         <fa-icon [icon]="faDelete" data-toggle="tooltip" title="Delete"></fa-icon>
                     </div>
                 </div>
@@ -34,4 +36,4 @@
     </div>
 </div>
 
-<add-edit-category [categoryID]="categoryID" [isOpenPopUp]="isOpenPopUp" (closePopUp)="closePopUp()"></add-edit-category>
+<add-edit-course [courseID]="courseID" [isOpenPopUp]="isOpenPopUp" (closePopUp)="closePopUp()"></add-edit-course>
